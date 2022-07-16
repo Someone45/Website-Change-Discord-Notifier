@@ -19,10 +19,10 @@ async def on_ready():
 # replace with the time you would like to wait before each update is sent
 
 
-@tasks.loop(seconds="x")
+@tasks.loop(seconds = x)
 async def send_message():
     await client.wait_until_ready()
-    channel = client.get_channel("DiscordChannelID")  # replace with channel_id
+    channel = client.get_channel(DiscordChannelID)  # replace with channel_id
     check = Website_Check()
     check.checkWebsite()
     if check.changed == True:
